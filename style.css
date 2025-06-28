@@ -44,6 +44,8 @@ nav.navbar a.active {
   justify-content: center;
   padding: 120px 20px 60px;
   background: #1a1a1a;
+   border-bottom: 2px solid #00c8ff;
+  box-shadow: 0 2px 10px rgba(0, 200, 255, 0.1);
 }
 
 .hero-content {
