@@ -8,46 +8,40 @@
 </head>
 <body>
 
-<header>
-  <div class="hero">
-    <div class="hero-text">
+<nav class="navbar">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <img src="assets/your-photo.jpg" alt="Dhruv Visariya">
+    <div>
       <h1>Dhruv Visariya</h1>
-      <p>AIoT | Embedded Systems | Python Developer | Research & Signal Processing</p>
+      <p>AIoT Developer | Embedded Systems | Python | Research & Cyber-Physical Security</p>
       <a class="button" href="assets/Dhruv_Visariya_Resume_AIOT_2.pdf" download>📄 Download Resume</a>
-    </div>
-    <div class="hero-image">
-      <img src="assets/myImage.png" alt="Dhruv Visariya">
     </div>
   </div>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
-  <p>
-    I'm an engineering graduate with a strong foundation in Electronics and Communication, specializing in the AIoT domain — combining embedded hardware, IoT protocols, and Python-powered automation.
-  </p>
-  <p>
-    My projects range from building data-driven SaaS tools to simulating hardware attacks for cryptographic security. I thrive at the intersection of embedded systems and intelligent software logic.
-  </p>
+  <p>I’m an engineering graduate with a foundation in Electronics & Communication and a deep interest in building intelligent, connected systems. My work combines embedded hardware, software automation, and signal-level research. From simulating power traces for AES cryptanalysis to deploying NLP sentiment tools, I focus on practical systems that fuse the physical and digital world.</p>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="skills-list">
-    <span>Embedded C</span>
-    <span>Python</span>
-    <span>Flask / FastAPI</span>
-    <span>Streamlit</span>
-    <span>MQTT</span>
-    <span>UART/SPI</span>
-    <span>IoT Protocols</span>
-    <span>PCB Design</span>
-    <span>Signal Processing</span>
-    <span>Git & GitHub</span>
-    <span>OpenCV</span>
-    <span>SQLite, Firebase</span>
-    <span>Scikit-learn</span>
-    <span>Pandas</span>
+  <div class="skills">
+    <span>Embedded C</span><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>MQTT</span><span>UART/SPI</span>
+    <span>IoT Protocols</span><span>Signal Processing</span><span>OpenCV</span><span>Git</span><span>Firebase</span>
+    <span>SQLite</span><span>Scikit-learn</span><span>Pandas</span><span>PCB Design</span>
   </div>
 </section>
 
@@ -58,30 +52,54 @@
     <h3>Synthetic Power Traces for AES</h3>
     <p>Simulated 500+ traces using HW/HD models. Boosted DPA testing speed by 3x. Built on DPA-AES-1 prototype.</p>
     <a href="https://github.com/Dhruvvisariya/Synthetic_Power_Traces" target="_blank">GitHub Repo</a>
-    <div style="margin-top: 10px;">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/02tsDH-XoKk" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/02tsDH-XoKk" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div class="project">
     <h3>DSSA – YouTube Sentiment Analyzer</h3>
-    <p>Python NLP tool that analyzes YouTube comment sentiment for content creators. Built in Streamlit with backend automation.</p>
+    <p>Streamlit-based NLP tool analyzing 1000+ YouTube comments to assist creators with viewer insight.</p>
     <a href="https://github.com/Dhruvvisariya/DSSA" target="_blank">GitHub Repo</a>
   </div>
+</section>
 
-  <div class="project">
-    <h3>Analog Modulator & Power Supply</h3>
-    <p>Simulated AM circuit (300Hz–3kHz) and 5V regulated supply using LM7805. Verified through simulation.</p>
-    <a href="https://github.com/Dhruvvisariya/AM" target="_blank">GitHub Repo</a>
-  </div>
+<section id="education">
+  <h2>Education</h2>
+  <p><strong>B.Tech in Electronics & Communication</strong> — CGPA 8.83<br/>Graduated from [Your University Name], 2025</p>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <p><strong>Synthetic Power Traces for AES Cryptanalysis</strong><br/>
+  An article detailing simulation of side-channel attack vectors using statistical signal models.<br/>
+  🔗 <a href="https://www.linkedin.com/pulse/simulating-secrets-hardware-free-framework-power-aes-dhruv-visariya-esljc" target="_blank">Read on LinkedIn</a>
+  </p>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <a class="button" href="assets/Dhruv_Visariya_Resume_AIOT_2.pdf" download>📄 Download PDF Resume</a>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-  <p>GitHub: <a href="https://github.com/Dhruvvisariya" target="_blank">github.com/Dhruvvisariya</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/dhruvvisariya" target="_blank">linkedin.com/in/dhruvvisariya</a></p>
+  <p>📧 <a href="mailto:your.email@example.com">your.email@example.com</a><br/>
+     🔗 <a href="https://github.com/Dhruvvisariya" target="_blank">GitHub</a> |
+     <a href="https://linkedin.com/in/dhruvvisariya" target="_blank">LinkedIn</a></p>
 </section>
+
+<script>
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let fromTop = window.scrollY + 100;
+    navLinks.forEach(link => {
+      let section = document.querySelector(link.hash);
+      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+        navLinks.forEach(a => a.classList.remove("active"));
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
